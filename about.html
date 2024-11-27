@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Website Layout</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* Style the header */
+.header {
+  background-image: url("https://i.pinimg.com/474x/be/48/60/be4860198b7f7366e2c5b6de81160f16.jpg");
+  color:rgb(7, 51, 86);
+  padding: 40px;
+  text-align: center;
+}
+
+/* Style the top navigation bar*/
+.topnav {
+    overflow:hidden;
+    background-color:black;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding:25px 20px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+    color:gold;
+}
+
+/* Create three unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+}
+
+/* Left and right column */
+.column.side {
+  width: 25%;
+}
+
+/* Middle column */
+.column.middle {
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+    background-color: rgb(36, 36, 83);
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>ABOUT ME</h1>
+</div>
+
+<div class="topnav">
+    <a href="index.html">HOME</a>
+    <a href="about.html">ABOUT</a>
+    <a href="education.html">EDUCATION</a>
+    <a href="gallery.html">GALLERY</a>
+</div>
+
+<div class="row">
+    <div class="column side">
+       <img src="myself.jpeg" alt="myself" width="300" height="400" > 
+    </div>
+    
+    <div class="column middle">
+      <h2>Biodata</h2>
+      <p><h3>Hi,my full name is Nur Amira Dayana Binti Khairul Hisham</h3></p>
+      <p><h3>I am a university student from Universiti Teknologi MARA. I tend to be somewhat reserved, especially around people I don’t know well.</h3></p>
+      <p><h3>'m from Lunas, Kedah. I was born in Perlis (22 April 2024)In my family, I'm the older child. My hobby, I like spend my time with reading some novel or hear to any song</h3></p>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Website Layout</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* Style the header */
+.header {
+  background-image: url("https://i.pinimg.com/736x/ed/30/9c/ed309c059132e17c2ce6206b314a931e.jpg");
+  color:rgb(228, 45, 200);
+  padding: 40px;
+  text-align: center;
+}
+
+/* Style the top navigation bar*/
+.topnav {
+    overflow:hidden;
+    background-color:black;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f3d1ec;
+  text-align: center;
+  padding:25px 20px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+    color:gold;
+}
+
+/* Create three unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+}
+
+/* Left and right column */
+.column.side {
+  width: 25%;
+}
+
+/* Middle column */
+.column.middle {
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+    background-color: rgb(36, 36, 83);
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>MIRAA PERSONAL WEBPAGE</h1>
+</div>
+
+<div class="topnav">
+    <a href="index.html">HOME</a>
+    <a href="about.html">ABOUT</a>
+    <a href="education.html">EDUCATION</a>
+    <a href="gallery.html">GALLERY</a>
+</div>
+    
+    <div class="column middle">
+      <h1>INTRODUCTION</h1>
+      <p><h2>Hello, my name is Amira. This is my personal website.</h2></p>
+      <p><h2>Come visit and explore my webpage here. I hope you enjoy</h2></p>
+      <p><h2>my webpage. Give your comment after visit it</h2></p>
+    </div>
+
+    <div class="column side">
+      <img src="https://i.pinimg.com/474x/7b/e2/a8/7be2a89d6c2adf9faa77890b3e2c86b4.jpg" alt="myself" width="600" height="400" >
+    </div>
+  </div>
+
+</body>
+</html>
+
+
